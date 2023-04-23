@@ -28,14 +28,14 @@ function create(event) {
 function readForm() {
   const nameInput = document.getElementById('name')
   const lastnameInput = document.getElementById('lastname')
-  const genderInput = document.getElementById('gender')
+  // const genderInput = document.getElementById('gender')
   const descInput = document.getElementById('description')
   const emailInput = document.getElementById('email')
 
   const tarea = {
     name: nameInput.value,
     lastname: lastnameInput.value,
-    gender: genderInput.value,
+    // gender: genderInput.value,
     desc: descInput.value,
     email: emailInput.value,
     id: Date.now() // Math.random()
@@ -111,13 +111,13 @@ function editTask(id) {
   const tarea = tareas.find((tarea) => tarea.id === id)
   const nameInput = document.getElementById('name')
   const lastnameInput = document.getElementById('lastname')
-  const genderInput = document.getElementById('gender')
+  // const genderInput = document.getElementById('gender')
   const descInput = document.getElementById('description')
   const emailInput = document.getElementById('email')
 
   nameInput.value = tarea.name
   lastnameInput.value = tarea.lastname
-  genderInput.value = tarea.gender
+  // genderInput.value = tarea.gender
   descInput.value = tarea.desc
   emailInput.value = tarea.email
 }
