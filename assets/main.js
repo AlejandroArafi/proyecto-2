@@ -28,17 +28,15 @@ function create(event) {
 function readForm() {
   const nameInput = document.getElementById('name')
   const lastnameInput = document.getElementById('lastname')
-  // const genderInput = document.getElementById('gender')
   const descInput = document.getElementById('description')
   const emailInput = document.getElementById('email')
 
   const tarea = {
     name: nameInput.value,
     lastname: lastnameInput.value,
-    // gender: genderInput.value,
     desc: descInput.value,
     email: emailInput.value,
-    id: Date.now() // Math.random()
+    id: Date.now() 
   }
   return tarea
 }
@@ -80,12 +78,9 @@ function deleteTask(id) {
     cancelButtonText: 'Cancelar'
   }).then((result) => {
     if (result.isConfirmed) {
-      // 1. borrar desde tabla
       const row = document.getElementById(id)
       row.remove()
-      // 2. borrar del array
       tareas = tareas.filter((tarea) => tarea.id !== id)
-      // 3. guardar el array en localStorage
       saveDataLS()
       Swal.fire('Borrado correctamente', '', 'success')
     }
@@ -93,12 +88,7 @@ function deleteTask(id) {
 }
 
 function readFromLS() {
-  // let tareas
-  // if (JSON.parse(localStorage.getItem('tareas')) != null) {
-  //   tareas = JSON.parse(localStorage.getItem('tareas'))
-  // } else {
-  //   tareas = []
-  // }
+ 
   tareas = JSON.parse(localStorage.getItem('tareas')) || []
   tareas.forEach((el) => createRow(el))
 }
@@ -111,13 +101,11 @@ function editTask(id) {
   const tarea = tareas.find((tarea) => tarea.id === id)
   const nameInput = document.getElementById('name')
   const lastnameInput = document.getElementById('lastname')
-  // const genderInput = document.getElementById('gender')
   const descInput = document.getElementById('description')
   const emailInput = document.getElementById('email')
 
   nameInput.value = tarea.name
   lastnameInput.value = tarea.lastname
-  // genderInput.value = tarea.gender
   descInput.value = tarea.desc
   emailInput.value = tarea.email
 }
@@ -127,12 +115,9 @@ function update(event) {
   const valores = readForm()
   valores.id = editionId
 
-  // 1.- modificarlo en el array
   const index = tareas.findIndex((tarea) => tarea.id === editionId)
   tareas.splice(index, 1, valores)
-  // 2. modificarlo en localstorage
   saveDataLS()
-  // 3. modificarlo en la tabla
   const row = document.getElementById(editionId)
   row.innerHTML = `
     <td>${valores.name}</td>

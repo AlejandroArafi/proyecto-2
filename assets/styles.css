@@ -86,10 +86,6 @@ table, ted, th{
     background-color: #ccc;
 }
 
-/* .titulo{
-    color: blue;
-} */
-
 .swal2-popup{
     width: 300px !important;
 }
@@ -140,13 +136,8 @@ footer h2{
 
 div img {
     width: 50px;
-    /* margin-left: 33px; */
 }
 
-/* div img{
-    width: 15px;
-    align-items:end;
-} */
 
 @media (max-width: 480px) {
     .title{
