@@ -34,9 +34,17 @@ function readForm() {
   const tarea = {
     name: nameInput.value,
     lastname: lastnameInput.value,
-    desc: descInput.value,
-    email: emailInput.value,
+    // desc: descInput.value,
+    // email: emailInput.value,
     id: Date.now() 
+  }
+
+  if (descInput.value !== '') {
+    tarea.desc = descInput.value;
+  }
+
+  if(emailInput.value !== '') {
+    tarea.email = emailInput.value
   }
   return tarea
 }
@@ -44,11 +52,14 @@ function readForm() {
 function createRow(tarea) {
   const tbody = document.getElementById('tbody')
 
+  const descValue = tarea.desc ? tarea.desc : ''; // Verificar si hay una descripción
+
+
   tbody.innerHTML += `
-         <tr id="${tarea.id}">
+         <tr class='tbody-container' id="${tarea.id}">
             <td>${tarea.name}</td>
             <td>${tarea.lastname}</td>
-            <td>${tarea.desc}</td>
+            <td>${descValue}</td>
             <td>
                 <button class="edit" onclick="editTask(${tarea.id})">Editar</button>
                 <button class="delete" onclick="deleteTask(${tarea.id})">Eliminar</button>

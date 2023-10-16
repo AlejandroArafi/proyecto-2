@@ -1,5 +1,11 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 
-.title{
+}
+
+.title {
     font-family: 'Montserrat', sans-serif;
     font-family: 'Poppins', sans-serif;
     font-size: 50px;
@@ -9,12 +15,12 @@
     margin-bottom: 20px;
 }
 
-section p{
+section p {
     font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
     font-size: 20px;
-  
+
 }
 
 nav {
@@ -24,9 +30,10 @@ nav {
     justify-content: center;
     margin-bottom: 1em;
     margin-top: 1em;
-    
+
 }
-nav a{
+
+nav a {
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
 }
@@ -39,46 +46,61 @@ div {
 .logo {
     width: 120px;
     margin-top: 2em;
-
 }
 
-form{
+form {
     font-family: 'Poppins', sans-serif;
-    display: flex;
+    display: block;
+    margin: 0 auto;
     flex-direction: column;
     align-items: center;
     font-size: 17px;
-}
- 
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 400px;
 
-input, textarea, select{
+
+}
+
+
+input,
+textarea,
+select {
     font-family: 'Poppins', sans-serif;
     margin-bottom: 1em;
     width: 400px;
 }
-.textarea{
+
+.textarea {
     margin-bottom: 1em;
 }
 
-table, ted, th{
+#add {
+    margin-bottom: 20px;
+}
+
+table,ted,th {
     border: 1px solid black;
 }
 
-.data{
+
+.data {
     margin-top: 2em;
     display: flex;
     justify-content: center;
     margin-left: 10px;
 }
 
-.edit{
+.edit {
     background-color: rgb(105, 105, 203);
     color: white;
+    border-radius: 5px;
 }
 
-.delete{
+.delete {
     background-color: rgb(203, 73, 73);
     color: white;
+    border-radius: 5px;
 }
 
 #vacia {
@@ -86,16 +108,16 @@ table, ted, th{
     background-color: #ccc;
 }
 
-.swal2-popup{
+.swal2-popup {
     width: 300px !important;
 }
 
-tbody tr:nth-child(odd){
+tbody tr:nth-child(odd) {
     background-color: #fedad5;
 }
 
 tbody tr:nth-child(even) {
-    background-color:#fdf9c4;
+    background-color: #fdf9c4;
 }
 
 .rrss {
@@ -108,26 +130,25 @@ tbody tr:nth-child(even) {
     margin-top: 0px;
 }
 
-.rrss img{
+.rrss img {
     width: 40px;
 }
 
 footer {
-background-color: #F1e4db;
+    background-color: #F1e4db;
+    margin-top: auto;
 }
 
-footer h2{
-    display:flex;
+footer h2 {
+    display: flex;
     justify-content: center;
     margin-top: 1em;
     font-size: 28px;
-
-    
 }
 
 .copyrigth {
     font-family: 'Montserrat', sans-serif;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -140,7 +161,7 @@ div img {
 
 
 @media (max-width: 480px) {
-    .title{
+    .title {
         font-family: 'Montserrat', sans-serif;
         font-family: 'Poppins', sans-serif;
         font-size: 40px;
@@ -151,43 +172,49 @@ div img {
     }
 }
 
-    section p{
-        font-family: 'Poppins', sans-serif;
-        display: flex;
-        justify-content: center;
-        font-size: 17px;
-    }
+section p {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    font-size: 17px;
+}
 
-    .rrss {
-        background-color: #F1e4db;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 80px;
-        gap: 30px;
-        margin-top: 0px;
-    }
-    
-    .rrss img{
-        width: 37px;
-    }
+.rrss {
+    background-color: #F1e4db;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    gap: 30px;
+    margin-top: 0px;
+}
 
-    input, textarea, select{
-        font-family: 'Poppins', sans-serif;
-        margin-bottom: 1em;
-        width: 340px;
-    }
+.rrss img {
+    width: 37px;
+}
 
-    footer h2{
-        display:flex;
-        justify-content: center;
-        margin-top: 1em;
-        font-size: 20px;
-    }
-    form{
-        font-family: 'Poppins', sans-serif;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        font-size: 15px;
+input, textarea, select {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 1em;
+    width: 340px;
+}
+
+footer h2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+    font-size: 20px;
+}
+
+form {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+}
+
+.label {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
